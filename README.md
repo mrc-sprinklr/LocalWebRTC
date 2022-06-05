@@ -5,7 +5,7 @@
 1. first clone the repository using ***"git clone https://github.com/mrc-sprinklr/LocalWebRTC.git"***
 2. run ***"npm install"***
 3. run ***"npm start"*** to start the local server
-4. open two pages and connect to server from both the page
+4. open two instances of index.html (in localhost) and click 'connect to server' button from both the page
 5. call from any of the page and receive from other
 6. now connection is established, so enjoy data sharing
 
