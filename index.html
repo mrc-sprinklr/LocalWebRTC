@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Connect</title>
+    <link rel="shortcut icon"
+          href="#">
+    <link rel="stylesheet"
+          href="./style.css"
+          type="text/css">
+</head>
+
+<body>
+    <svg></svg>
+
+    <div id="grid1">
+        <div class="grid-item1"
+             id="upper">
+
+            <button id="connect">Connet to Server</button>
+
+            <button class="tab"
+                    id="tab1">Message</button>
+            <button class="tab"
+                    id="tab2">Video-Call</button>
+            <button class="tab"
+                    id="tab3">Screen-Share</button>
+
+            <div class="dropdown">
+                <button id="dropbtn-1"
+                        class="dropbtn">Voice-Call</button>
+                <div id="dropdown-1"
+                     class="dropdown-content">
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                    <a href="#">Home</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="grid-item1"
+             id="middle">
+
+            <div id="welcome">
+                WELCOME
+            </div>
+
+            <div id="message">
+                <div id="send-block">
+                    <input type="text"
+                           placeholder="message"
+                           id="message-box">
+                    <button id="send">Send</button>
+                </div>
+                <textarea class="message-record"
+                          id="outmessage"
+                          readonly
+                          spellcheck="false"></textarea>
+                <textarea class="message-record"
+                          id="inmessage"
+                          readonly
+                          spellcheck="false"></textarea>
+            </div>
+
+            <div id="video-call">
+                <div class="video-box">
+                    <video class="video-screen "
+                           id="outgoing"
+                           autoplay
+                           muted
+                           alt="load error"></video>
+                </div>
+                <div class="video-box">
+                    <video class="video-screen "
+                           id="incoming"
+                           autoplay
+                           alt="load error"></video>
+                </div>
+            </div>
+
+            <div id="screen-share">
+                <div class="share-box">
+                    <video class="share-screen "
+                           autoplay
+                           muted
+                           alt="load error"></video>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="grid-item1"
+             id="lower">
+
+            <button id="receive-button">
+                <svg id="receive-svg">
+                    <use xlink:href="shape.svg#receive"></use>
+                </svg>
+            </button>
+
+            <button id="hangup-button">
+                <svg id="hangup-svg">
+                    <use xlink:href="shape.svg#hangup"></use>
+                </svg>
+            </button>
+
+            <button id="toggle-vid">
+                <svg id="vid-svg">
+                    <use xlink:href="shape.svg#vid"></use>
+                </svg>
+                <svg id="no-vid-svg">
+                    <use xlink:href="shape.svg#no-vid"></use>
+                </svg>
+            </button>
+
+            <button id="toggle-mic">
+                <svg id="mic-svg">
+                    <use xlink:href="shape.svg#mic"></use>
+                </svg>
+                <svg id="no-mic-svg">
+                    <use xlink:href="shape.svg#no-mic"></use>
+                </svg>
+            </button>
+
+            <button id="toggle-share">
+                <svg id="share-svg">
+                    <use xlink:href="shape.svg#share"></use>
+                </svg>
+                <svg id="no-share-svg">
+                    <use xlink:href="shape.svg#no-share"></use>
+                </svg>
+            </button>
+
+            <button id="theme">
+                <svg id="moon-svg">
+                    <use xlink:href="shape.svg#moon"></use>
+                </svg>
+                <svg id="sun-svg">
+                    <use xlink:href="shape.svg#sun"></use>
+                </svg>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- find ./ | grep socket.io.js -->
+    <script src='./node_modules/socket.io/client-dist/socket.io.js'></script>
+    <script type="module"
+            src="./app.js"></script>
+</body>
+
+</html>
